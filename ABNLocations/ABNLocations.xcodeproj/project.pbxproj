@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		CDDAA0A92A2B5422001AE440 /* ABNLocations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDAA0A02A2B5422001AE440 /* ABNLocations.framework */; };
-		CDDAA0AE2A2B5422001AE440 /* ABNLocationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0AD2A2B5422001AE440 /* ABNLocationsTests.swift */; };
 		CDDAA0AF2A2B5422001AE440 /* ABNLocations.h in Headers */ = {isa = PBXBuildFile; fileRef = CDDAA0A32A2B5422001AE440 /* ABNLocations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDDAA0BA2A2B553D001AE440 /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0B92A2B553D001AE440 /* URLSessionHTTPClientTests.swift */; };
+		CDDAA0BD2A2B5642001AE440 /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0BC2A2B5642001AE440 /* URLProtocolStub.swift */; };
+		CDDAA0C02A2B577B001AE440 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0BF2A2B577B001AE440 /* XCTestCase+MemoryLeakTracking.swift */; };
+		CDDAA0C32A2B5862001AE440 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0C22A2B5862001AE440 /* URLSessionHTTPClient.swift */; };
+		CDDAA0C52A2B5876001AE440 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0C42A2B5876001AE440 /* HTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,7 +30,11 @@
 		CDDAA0A02A2B5422001AE440 /* ABNLocations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ABNLocations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDDAA0A32A2B5422001AE440 /* ABNLocations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABNLocations.h; sourceTree = "<group>"; };
 		CDDAA0A82A2B5422001AE440 /* ABNLocationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ABNLocationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CDDAA0AD2A2B5422001AE440 /* ABNLocationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABNLocationsTests.swift; sourceTree = "<group>"; };
+		CDDAA0B92A2B553D001AE440 /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
+		CDDAA0BC2A2B5642001AE440 /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
+		CDDAA0BF2A2B577B001AE440 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
+		CDDAA0C22A2B5862001AE440 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
+		CDDAA0C42A2B5876001AE440 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +77,7 @@
 		CDDAA0A22A2B5422001AE440 /* ABNLocations */ = {
 			isa = PBXGroup;
 			children = (
+				CDDAA0C12A2B5807001AE440 /* Shared API Infra */,
 				CDDAA0A32A2B5422001AE440 /* ABNLocations.h */,
 			);
 			path = ABNLocations;
@@ -77,9 +86,44 @@
 		CDDAA0AC2A2B5422001AE440 /* ABNLocationsTests */ = {
 			isa = PBXGroup;
 			children = (
-				CDDAA0AD2A2B5422001AE440 /* ABNLocationsTests.swift */,
+				CDDAA0BE2A2B5767001AE440 /* Helpers */,
+				CDDAA0B82A2B550F001AE440 /* Shared API Infra */,
 			);
 			path = ABNLocationsTests;
+			sourceTree = "<group>";
+		};
+		CDDAA0B82A2B550F001AE440 /* Shared API Infra */ = {
+			isa = PBXGroup;
+			children = (
+				CDDAA0BB2A2B562A001AE440 /* Helpers */,
+				CDDAA0B92A2B553D001AE440 /* URLSessionHTTPClientTests.swift */,
+			);
+			path = "Shared API Infra";
+			sourceTree = "<group>";
+		};
+		CDDAA0BB2A2B562A001AE440 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CDDAA0BC2A2B5642001AE440 /* URLProtocolStub.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CDDAA0BE2A2B5767001AE440 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CDDAA0BF2A2B577B001AE440 /* XCTestCase+MemoryLeakTracking.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CDDAA0C12A2B5807001AE440 /* Shared API Infra */ = {
+			isa = PBXGroup;
+			children = (
+				CDDAA0C22A2B5862001AE440 /* URLSessionHTTPClient.swift */,
+				CDDAA0C42A2B5876001AE440 /* HTTPClient.swift */,
+			);
+			path = "Shared API Infra";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +188,7 @@
 				TargetAttributes = {
 					CDDAA09F2A2B5422001AE440 = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 					CDDAA0A72A2B5422001AE440 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -191,6 +236,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDDAA0C52A2B5876001AE440 /* HTTPClient.swift in Sources */,
+				CDDAA0C32A2B5862001AE440 /* URLSessionHTTPClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,7 +245,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDDAA0AE2A2B5422001AE440 /* ABNLocationsTests.swift in Sources */,
+				CDDAA0BA2A2B553D001AE440 /* URLSessionHTTPClientTests.swift in Sources */,
+				CDDAA0BD2A2B5642001AE440 /* URLProtocolStub.swift in Sources */,
+				CDDAA0C02A2B577B001AE440 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +384,7 @@
 		CDDAA0B32A2B5422001AE440 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -358,6 +408,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -365,6 +416,7 @@
 		CDDAA0B42A2B5422001AE440 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -395,6 +447,7 @@
 		CDDAA0B62A2B5422001AE440 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -409,6 +462,7 @@
 		CDDAA0B72A2B5422001AE440 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
