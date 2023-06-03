@@ -5,7 +5,7 @@ public struct Location: Equatable {
         self.longitude = longitude
     }
     
-    let name: String?
-    let latitude: Double
-    let longitude: Double
+    public let name: String?
+    public let latitude: Double
+    public let longitude: Double
 }
