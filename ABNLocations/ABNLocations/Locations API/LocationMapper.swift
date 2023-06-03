@@ -26,7 +26,7 @@ public final class LocationMapper {
     }
     
     public static func map(_ data: Data, from response: HTTPURLResponse) throws -> [Location] {
-        guard response.statusCode == 200,  let root = try? JSONDecoder().decode(Root.self, from: data) else {
+        guard response.isOK,  let root = try? JSONDecoder().decode(Root.self, from: data) else {
             throw Error.invalidData
         }
         return root.toDomainLocations

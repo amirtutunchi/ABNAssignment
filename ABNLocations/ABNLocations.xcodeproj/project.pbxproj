@@ -18,6 +18,7 @@
 		CDDAA0CB2A2B6099001AE440 /* LocationMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0CA2A2B6099001AE440 /* LocationMapperTests.swift */; };
 		CDDAA0CE2A2B62EF001AE440 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0CD2A2B62EF001AE440 /* Location.swift */; };
 		CDDAA0D02A2B63DF001AE440 /* LocationMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0CF2A2B63DF001AE440 /* LocationMapper.swift */; };
+		CDDAA0D32A2B69EC001AE440 /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0D22A2B69EC001AE440 /* HTTPURLResponse+StatusCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		CDDAA0CA2A2B6099001AE440 /* LocationMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapperTests.swift; sourceTree = "<group>"; };
 		CDDAA0CD2A2B62EF001AE440 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		CDDAA0CF2A2B63DF001AE440 /* LocationMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapper.swift; sourceTree = "<group>"; };
+		CDDAA0D22A2B69EC001AE440 /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		CDDAA0C82A2B6064001AE440 /* Locations API */ = {
 			isa = PBXGroup;
 			children = (
+				CDDAA0D12A2B69DF001AE440 /* Helpers */,
 				CDDAA0CF2A2B63DF001AE440 /* LocationMapper.swift */,
 			);
 			path = "Locations API";
@@ -160,6 +163,14 @@
 				CDDAA0CD2A2B62EF001AE440 /* Location.swift */,
 			);
 			path = "Location Feature";
+			sourceTree = "<group>";
+		};
+		CDDAA0D12A2B69DF001AE440 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CDDAA0D22A2B69EC001AE440 /* HTTPURLResponse+StatusCode.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +285,7 @@
 			files = (
 				CDDAA0C52A2B5876001AE440 /* HTTPClient.swift in Sources */,
 				CDDAA0D02A2B63DF001AE440 /* LocationMapper.swift in Sources */,
+				CDDAA0D32A2B69EC001AE440 /* HTTPURLResponse+StatusCode.swift in Sources */,
 				CDDAA0CE2A2B62EF001AE440 /* Location.swift in Sources */,
 				CDDAA0C32A2B5862001AE440 /* URLSessionHTTPClient.swift in Sources */,
 			);
