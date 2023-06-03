@@ -14,6 +14,7 @@
 		CDDAA0C02A2B577B001AE440 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0BF2A2B577B001AE440 /* XCTestCase+MemoryLeakTracking.swift */; };
 		CDDAA0C32A2B5862001AE440 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0C22A2B5862001AE440 /* URLSessionHTTPClient.swift */; };
 		CDDAA0C52A2B5876001AE440 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0C42A2B5876001AE440 /* HTTPClient.swift */; };
+		CDDAA0C72A2B5970001AE440 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0C62A2B5970001AE440 /* SharedTestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		CDDAA0BF2A2B577B001AE440 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		CDDAA0C22A2B5862001AE440 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		CDDAA0C42A2B5876001AE440 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		CDDAA0C62A2B5970001AE440 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				CDDAA0BC2A2B5642001AE440 /* URLProtocolStub.swift */,
+				CDDAA0C62A2B5970001AE440 /* SharedTestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDDAA0C72A2B5970001AE440 /* SharedTestHelpers.swift in Sources */,
 				CDDAA0BA2A2B553D001AE440 /* URLSessionHTTPClientTests.swift in Sources */,
 				CDDAA0BD2A2B5642001AE440 /* URLProtocolStub.swift in Sources */,
 				CDDAA0C02A2B577B001AE440 /* XCTestCase+MemoryLeakTracking.swift in Sources */,

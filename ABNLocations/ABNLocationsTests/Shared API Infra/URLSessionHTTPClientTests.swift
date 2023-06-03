@@ -2,6 +2,11 @@ import XCTest
 import ABNLocations
 
 final class URLSessionHTTPClientTests: XCTestCase {
+    override func tearDown() {
+        super.tearDown()
+        
+        URLProtocolStub.removeStub()
+    }
     func test_getFromURL_performsGETRequestWithURL() {
         let url = anyURL()
         let exp = expectation(description: "Wait for request")
@@ -16,14 +21,18 @@ final class URLSessionHTTPClientTests: XCTestCase {
         
         wait(for: [exp], timeout: 1.0)
     }
+    
+    func test_getFromURL_failsOnRequestError() {
+        let requestError = anyNSError()
+        
+        let receivedError = resultErrorFor((data: nil, response: nil, error: requestError))
+        
+        XCTAssertNotNil(receivedError)
+    }
 }
 
 // MARK: - Test helpers
 extension URLSessionHTTPClientTests {
-    private func anyURL() -> URL {
-        URL(string: "https://www.anyurl.com")!
-    }
-    
     private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> HTTPClient {
         let configuration = URLSessionConfiguration.ephemeral
         configuration.protocolClasses = [URLProtocolStub.self]
@@ -33,4 +42,33 @@ extension URLSessionHTTPClientTests {
         trackForMemoryLeaks(sut, file: file, line: line)
         return sut
     }
+    
+    private func resultErrorFor(_ values: (data: Data?, response: URLResponse?, error: Error?)? = nil, file: StaticString = #filePath, line: UInt = #line) -> Error? {
+        let result = resultFor(values, file: file, line: line)
+        
+        switch result {
+        case let .failure(error):
+            return error
+        default:
+            XCTFail("Expected failure, got \(result) instead", file: file, line: line)
+            return nil
+        }
+    }
+    
+    private func resultFor(_ values: (data: Data?, response: URLResponse?, error: Error?)?,  file: StaticString = #filePath, line: UInt = #line) -> HTTPClient.Result {
+        values.map { URLProtocolStub.stub(data: $0, response: $1, error: $2) }
+        
+        let sut = makeSUT(file: file, line: line)
+        let exp = expectation(description: "Wait for completion")
+        
+        var receivedResult: HTTPClient.Result!
+        sut.get(from: anyURL()) { result in
+            receivedResult = result
+            exp.fulfill()
+        }
+        
+        wait(for: [exp], timeout: 1.0)
+        return receivedResult
+    }
+    
 }
