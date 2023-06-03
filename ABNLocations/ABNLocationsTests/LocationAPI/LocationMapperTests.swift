@@ -20,13 +20,22 @@ final class LocationMapperTests: XCTestCase {
             try LocationMapper.map(invalidJSON, from: HTTPURLResponse(statusCode: 200))
         )
     }
+    
+    func test_map_deliversNoItemsOn200HTTPResponseWithEmptyJSONList() throws {
+        let emptyListJSON = makeLocationsJSON([])
+        
+        let result = try LocationMapper.map(emptyListJSON, from: HTTPURLResponse(statusCode: 200))
+        
+        XCTAssertEqual(result, [])
+    }
+    
 }
 
 // MARK: - Test Helpers
 extension LocationMapperTests {
     
     func makeLocationsJSON(_ items: [[String: Any]]) -> Data {
-        let json = ["Locations": items]
+        let json = ["locations": items]
         return try! JSONSerialization.data(withJSONObject: json)
     }
 }
