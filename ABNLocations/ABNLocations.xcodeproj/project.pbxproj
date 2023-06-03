@@ -15,6 +15,9 @@
 		CDDAA0C32A2B5862001AE440 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0C22A2B5862001AE440 /* URLSessionHTTPClient.swift */; };
 		CDDAA0C52A2B5876001AE440 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0C42A2B5876001AE440 /* HTTPClient.swift */; };
 		CDDAA0C72A2B5970001AE440 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0C62A2B5970001AE440 /* SharedTestHelpers.swift */; };
+		CDDAA0CB2A2B6099001AE440 /* LocationMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0CA2A2B6099001AE440 /* LocationMapperTests.swift */; };
+		CDDAA0CE2A2B62EF001AE440 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0CD2A2B62EF001AE440 /* Location.swift */; };
+		CDDAA0D02A2B63DF001AE440 /* LocationMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0CF2A2B63DF001AE440 /* LocationMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,9 @@
 		CDDAA0C22A2B5862001AE440 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		CDDAA0C42A2B5876001AE440 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		CDDAA0C62A2B5970001AE440 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
+		CDDAA0CA2A2B6099001AE440 /* LocationMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapperTests.swift; sourceTree = "<group>"; };
+		CDDAA0CD2A2B62EF001AE440 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		CDDAA0CF2A2B63DF001AE440 /* LocationMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,8 @@
 		CDDAA0A22A2B5422001AE440 /* ABNLocations */ = {
 			isa = PBXGroup;
 			children = (
+				CDDAA0CC2A2B62D3001AE440 /* Location Feature */,
+				CDDAA0C82A2B6064001AE440 /* Locations API */,
 				CDDAA0C12A2B5807001AE440 /* Shared API Infra */,
 				CDDAA0A32A2B5422001AE440 /* ABNLocations.h */,
 			);
@@ -88,6 +96,7 @@
 		CDDAA0AC2A2B5422001AE440 /* ABNLocationsTests */ = {
 			isa = PBXGroup;
 			children = (
+				CDDAA0C92A2B6081001AE440 /* LocationAPI */,
 				CDDAA0BE2A2B5767001AE440 /* Helpers */,
 				CDDAA0B82A2B550F001AE440 /* Shared API Infra */,
 			);
@@ -107,7 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				CDDAA0BC2A2B5642001AE440 /* URLProtocolStub.swift */,
-				CDDAA0C62A2B5970001AE440 /* SharedTestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -115,6 +123,7 @@
 		CDDAA0BE2A2B5767001AE440 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				CDDAA0C62A2B5970001AE440 /* SharedTestHelpers.swift */,
 				CDDAA0BF2A2B577B001AE440 /* XCTestCase+MemoryLeakTracking.swift */,
 			);
 			path = Helpers;
@@ -127,6 +136,30 @@
 				CDDAA0C42A2B5876001AE440 /* HTTPClient.swift */,
 			);
 			path = "Shared API Infra";
+			sourceTree = "<group>";
+		};
+		CDDAA0C82A2B6064001AE440 /* Locations API */ = {
+			isa = PBXGroup;
+			children = (
+				CDDAA0CF2A2B63DF001AE440 /* LocationMapper.swift */,
+			);
+			path = "Locations API";
+			sourceTree = "<group>";
+		};
+		CDDAA0C92A2B6081001AE440 /* LocationAPI */ = {
+			isa = PBXGroup;
+			children = (
+				CDDAA0CA2A2B6099001AE440 /* LocationMapperTests.swift */,
+			);
+			path = LocationAPI;
+			sourceTree = "<group>";
+		};
+		CDDAA0CC2A2B62D3001AE440 /* Location Feature */ = {
+			isa = PBXGroup;
+			children = (
+				CDDAA0CD2A2B62EF001AE440 /* Location.swift */,
+			);
+			path = "Location Feature";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +273,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDDAA0C52A2B5876001AE440 /* HTTPClient.swift in Sources */,
+				CDDAA0D02A2B63DF001AE440 /* LocationMapper.swift in Sources */,
+				CDDAA0CE2A2B62EF001AE440 /* Location.swift in Sources */,
 				CDDAA0C32A2B5862001AE440 /* URLSessionHTTPClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDDAA0CB2A2B6099001AE440 /* LocationMapperTests.swift in Sources */,
 				CDDAA0C72A2B5970001AE440 /* SharedTestHelpers.swift in Sources */,
 				CDDAA0BA2A2B553D001AE440 /* URLSessionHTTPClientTests.swift in Sources */,
 				CDDAA0BD2A2B5642001AE440 /* URLProtocolStub.swift in Sources */,
