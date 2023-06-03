@@ -11,8 +11,9 @@
 		CD80CF872A2B94D200B63853 /* LocationLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD80CF862A2B94D200B63853 /* LocationLoadingViewModel.swift */; };
 		CD80CF892A2B94E900B63853 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD80CF882A2B94E900B63853 /* LocationViewModel.swift */; };
 		CD80CF972A2BC8DC00B63853 /* ABNLocationiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD80CF8F2A2BC8DC00B63853 /* ABNLocationiOS.framework */; };
-		CD80CF9C2A2BC8DC00B63853 /* ABNLocationiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD80CF9B2A2BC8DC00B63853 /* ABNLocationiOSTests.swift */; };
 		CD80CF9D2A2BC8DC00B63853 /* ABNLocationiOS.h in Headers */ = {isa = PBXBuildFile; fileRef = CD80CF912A2BC8DC00B63853 /* ABNLocationiOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD80CFB32A2BE00F00B63853 /* UIViewContorller+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD80CFB22A2BE00F00B63853 /* UIViewContorller+Snapshot.swift */; };
+		CD80CFB52A2BE04100B63853 /* XCTestCase+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD80CFB42A2BE04100B63853 /* XCTestCase+Snapshot.swift */; };
 		CDDAA0A92A2B5422001AE440 /* ABNLocations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDAA0A02A2B5422001AE440 /* ABNLocations.framework */; };
 		CDDAA0AF2A2B5422001AE440 /* ABNLocations.h in Headers */ = {isa = PBXBuildFile; fileRef = CDDAA0A32A2B5422001AE440 /* ABNLocations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDDAA0BA2A2B553D001AE440 /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0B92A2B553D001AE440 /* URLSessionHTTPClientTests.swift */; };
@@ -54,7 +55,8 @@
 		CD80CF8F2A2BC8DC00B63853 /* ABNLocationiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ABNLocationiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD80CF912A2BC8DC00B63853 /* ABNLocationiOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABNLocationiOS.h; sourceTree = "<group>"; };
 		CD80CF962A2BC8DC00B63853 /* ABNLocationiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ABNLocationiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD80CF9B2A2BC8DC00B63853 /* ABNLocationiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABNLocationiOSTests.swift; sourceTree = "<group>"; };
+		CD80CFB22A2BE00F00B63853 /* UIViewContorller+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewContorller+Snapshot.swift"; sourceTree = "<group>"; };
+		CD80CFB42A2BE04100B63853 /* XCTestCase+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Snapshot.swift"; sourceTree = "<group>"; };
 		CDDAA0A02A2B5422001AE440 /* ABNLocations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ABNLocations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDDAA0A32A2B5422001AE440 /* ABNLocations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABNLocations.h; sourceTree = "<group>"; };
 		CDDAA0A82A2B5422001AE440 /* ABNLocationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ABNLocationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +112,7 @@
 		CD80CF902A2BC8DC00B63853 /* ABNLocationiOS */ = {
 			isa = PBXGroup;
 			children = (
+				CD80CFB62A2BE09B00B63853 /* LocationsList */,
 				CD80CF912A2BC8DC00B63853 /* ABNLocationiOS.h */,
 			);
 			path = ABNLocationiOS;
@@ -118,9 +121,25 @@
 		CD80CF9A2A2BC8DC00B63853 /* ABNLocationiOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				CD80CF9B2A2BC8DC00B63853 /* ABNLocationiOSTests.swift */,
+				CD80CFB12A2BDFCE00B63853 /* Helpers */,
 			);
 			path = ABNLocationiOSTests;
+			sourceTree = "<group>";
+		};
+		CD80CFB12A2BDFCE00B63853 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CD80CFB22A2BE00F00B63853 /* UIViewContorller+Snapshot.swift */,
+				CD80CFB42A2BE04100B63853 /* XCTestCase+Snapshot.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CD80CFB62A2BE09B00B63853 /* LocationsList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LocationsList;
 			sourceTree = "<group>";
 		};
 		CDDAA0962A2B5422001AE440 = {
@@ -439,7 +458,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD80CF9C2A2BC8DC00B63853 /* ABNLocationiOSTests.swift in Sources */,
+				CD80CFB52A2BE04100B63853 /* XCTestCase+Snapshot.swift in Sources */,
+				CD80CFB32A2BE00F00B63853 /* UIViewContorller+Snapshot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
