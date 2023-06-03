@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD80CF852A2B949A00B63853 /* LocationsPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD80CF842A2B949A00B63853 /* LocationsPresentation.swift */; };
+		CD80CF872A2B94D200B63853 /* LocationLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD80CF862A2B94D200B63853 /* LocationLoadingViewModel.swift */; };
+		CD80CF892A2B94E900B63853 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD80CF882A2B94E900B63853 /* LocationViewModel.swift */; };
 		CDDAA0A92A2B5422001AE440 /* ABNLocations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDAA0A02A2B5422001AE440 /* ABNLocations.framework */; };
 		CDDAA0AF2A2B5422001AE440 /* ABNLocations.h in Headers */ = {isa = PBXBuildFile; fileRef = CDDAA0A32A2B5422001AE440 /* ABNLocations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDDAA0BA2A2B553D001AE440 /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0B92A2B553D001AE440 /* URLSessionHTTPClientTests.swift */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD80CF842A2B949A00B63853 /* LocationsPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsPresentation.swift; sourceTree = "<group>"; };
+		CD80CF862A2B94D200B63853 /* LocationLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationLoadingViewModel.swift; sourceTree = "<group>"; };
+		CD80CF882A2B94E900B63853 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		CDDAA0A02A2B5422001AE440 /* ABNLocations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ABNLocations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDDAA0A32A2B5422001AE440 /* ABNLocations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABNLocations.h; sourceTree = "<group>"; };
 		CDDAA0A82A2B5422001AE440 /* ABNLocationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ABNLocationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +192,9 @@
 		CDDAA0D82A2B724F001AE440 /* Location Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				CD80CF842A2B949A00B63853 /* LocationsPresentation.swift */,
+				CD80CF862A2B94D200B63853 /* LocationLoadingViewModel.swift */,
+				CD80CF882A2B94E900B63853 /* LocationViewModel.swift */,
 			);
 			path = "Location Presentation";
 			sourceTree = "<group>";
@@ -311,8 +320,11 @@
 				CDDAA0C52A2B5876001AE440 /* HTTPClient.swift in Sources */,
 				CDDAA0D02A2B63DF001AE440 /* LocationMapper.swift in Sources */,
 				CDDAA0D32A2B69EC001AE440 /* HTTPURLResponse+StatusCode.swift in Sources */,
+				CD80CF852A2B949A00B63853 /* LocationsPresentation.swift in Sources */,
+				CD80CF872A2B94D200B63853 /* LocationLoadingViewModel.swift in Sources */,
 				CDDAA0D72A2B6DDA001AE440 /* LocationEndpoint.swift in Sources */,
 				CDDAA0CE2A2B62EF001AE440 /* Location.swift in Sources */,
+				CD80CF892A2B94E900B63853 /* LocationViewModel.swift in Sources */,
 				CDDAA0C32A2B5862001AE440 /* URLSessionHTTPClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
