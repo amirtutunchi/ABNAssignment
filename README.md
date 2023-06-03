@@ -4,7 +4,7 @@ for this project I decided to create a mac framework to test drive the networkin
 ## ABN Locations (mac framework)
 
 ### Specs:
-- [ ] Get list of places that we can navigate from API.
+- [x] Get list of places that we can navigate from API.
 - [ ]  Show list of places
 - [ ] Users can add to this list manually
 

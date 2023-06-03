@@ -19,6 +19,8 @@
 		CDDAA0CE2A2B62EF001AE440 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0CD2A2B62EF001AE440 /* Location.swift */; };
 		CDDAA0D02A2B63DF001AE440 /* LocationMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0CF2A2B63DF001AE440 /* LocationMapper.swift */; };
 		CDDAA0D32A2B69EC001AE440 /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0D22A2B69EC001AE440 /* HTTPURLResponse+StatusCode.swift */; };
+		CDDAA0D52A2B6C07001AE440 /* LocationEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0D42A2B6C07001AE440 /* LocationEndpointTests.swift */; };
+		CDDAA0D72A2B6DDA001AE440 /* LocationEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0D62A2B6DDA001AE440 /* LocationEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		CDDAA0CD2A2B62EF001AE440 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		CDDAA0CF2A2B63DF001AE440 /* LocationMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapper.swift; sourceTree = "<group>"; };
 		CDDAA0D22A2B69EC001AE440 /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
+		CDDAA0D42A2B6C07001AE440 /* LocationEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEndpointTests.swift; sourceTree = "<group>"; };
+		CDDAA0D62A2B6DDA001AE440 /* LocationEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,7 @@
 			children = (
 				CDDAA0D12A2B69DF001AE440 /* Helpers */,
 				CDDAA0CF2A2B63DF001AE440 /* LocationMapper.swift */,
+				CDDAA0D62A2B6DDA001AE440 /* LocationEndpoint.swift */,
 			);
 			path = "Locations API";
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				CDDAA0CA2A2B6099001AE440 /* LocationMapperTests.swift */,
+				CDDAA0D42A2B6C07001AE440 /* LocationEndpointTests.swift */,
 			);
 			path = LocationAPI;
 			sourceTree = "<group>";
@@ -286,6 +292,7 @@
 				CDDAA0C52A2B5876001AE440 /* HTTPClient.swift in Sources */,
 				CDDAA0D02A2B63DF001AE440 /* LocationMapper.swift in Sources */,
 				CDDAA0D32A2B69EC001AE440 /* HTTPURLResponse+StatusCode.swift in Sources */,
+				CDDAA0D72A2B6DDA001AE440 /* LocationEndpoint.swift in Sources */,
 				CDDAA0CE2A2B62EF001AE440 /* Location.swift in Sources */,
 				CDDAA0C32A2B5862001AE440 /* URLSessionHTTPClient.swift in Sources */,
 			);
@@ -296,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDDAA0CB2A2B6099001AE440 /* LocationMapperTests.swift in Sources */,
+				CDDAA0D52A2B6C07001AE440 /* LocationEndpointTests.swift in Sources */,
 				CDDAA0C72A2B5970001AE440 /* SharedTestHelpers.swift in Sources */,
 				CDDAA0BA2A2B553D001AE440 /* URLSessionHTTPClientTests.swift in Sources */,
 				CDDAA0BD2A2B5642001AE440 /* URLProtocolStub.swift in Sources */,
