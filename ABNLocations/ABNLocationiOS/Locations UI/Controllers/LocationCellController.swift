@@ -2,7 +2,7 @@ import UIKit
 import ABNLocations
 
 public final class LocationCellController {
-    
+    public var openCoordinate: ((_ latitude: Double, _ longitude: Double) -> Void)?
     public init(viewModel: LocationViewModel) {
         self.viewModel = viewModel
     }
@@ -15,6 +15,10 @@ public final class LocationCellController {
         cell.latitudeLabel.text = String(viewModel.latitude)
         cell.longitudeLabel.text = String(viewModel.longitude)
         return cell
+    }
+    
+    public func didSelectedCell() {
+        openCoordinate?(viewModel.latitude, viewModel.longitude)
     }
 }
 

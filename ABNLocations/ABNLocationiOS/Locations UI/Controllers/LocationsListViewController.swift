@@ -33,7 +33,14 @@ public final class LocationsListViewController: UITableViewController {
     }
     
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableModel[indexPath.row].view(in: tableView)
+        let cell = tableModel[indexPath.row]
+        cell.openCoordinate = openCoordinate
+        return cell.view(in: tableView)
+    }
+    
+    public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableModel[indexPath.row].didSelectedCell()
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     private func promptForNewLocation() {
