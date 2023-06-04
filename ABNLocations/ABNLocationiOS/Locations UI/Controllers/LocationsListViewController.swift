@@ -55,6 +55,8 @@ public final class LocationsListViewController: UITableViewController {
             self?.openCoordinate?(lat, long)
         }
         alertController.addAction(submitAction)
+        let closeAction = UIAlertAction(title: "Close", style: .destructive)
+        alertController.addAction(closeAction)
         return alertController
     }
 }
