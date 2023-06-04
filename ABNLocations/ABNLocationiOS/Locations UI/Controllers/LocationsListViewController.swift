@@ -36,7 +36,7 @@ public final class LocationsListViewController: UITableViewController {
         return tableModel[indexPath.row].view(in: tableView)
     }
     
-    public func promptForNewLocation() {
+    private func promptForNewLocation() {
         present(createPromptForNewLocation(), animated: false)
     }
     
