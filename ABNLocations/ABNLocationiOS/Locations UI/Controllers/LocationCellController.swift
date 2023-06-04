@@ -11,7 +11,9 @@ public final class LocationCellController {
     
     public func view(in tableView: UITableView) -> UITableViewCell {
         let cell: LocationCell = tableView.dequeueReusableCell()
-        
+        cell.nameLabel.text = viewModel.name ?? "No name"
+        cell.latitudeLabel.text = String(viewModel.latitude)
+        cell.longitudeLabel.text = String(viewModel.longitude)
         return cell
     }
 }
