@@ -1,0 +1,41 @@
+{
+  "configurations" : [
+    {
+      "id" : "31206DCA-3E57-416C-B65C-89D3463306B4",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:ABNLocations.xcodeproj",
+        "identifier" : "CD80CF952A2BC8DC00B63853",
+        "name" : "ABNLocationiOSTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:ABNLocations.xcodeproj",
+        "identifier" : "CDDAA0A72A2B5422001AE440",
+        "name" : "ABNLocationsTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:..\/ABNLocationsApp\/ABNLocationsApp.xcodeproj",
+        "identifier" : "CD6660462A2CC7FC0057F70F",
+        "name" : "ABNLocationsAppTests"
+      }
+    }
+  ],
+  "version" : 1
+}

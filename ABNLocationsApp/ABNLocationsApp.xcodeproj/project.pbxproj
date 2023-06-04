@@ -11,7 +11,14 @@
 		CD6660372A2CC7FA0057F70F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6660362A2CC7FA0057F70F /* SceneDelegate.swift */; };
 		CD66603E2A2CC7FB0057F70F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD66603D2A2CC7FB0057F70F /* Assets.xcassets */; };
 		CD6660412A2CC7FB0057F70F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD66603F2A2CC7FB0057F70F /* LaunchScreen.storyboard */; };
-		CD66604C2A2CC7FC0057F70F /* ABNLocationsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66604B2A2CC7FC0057F70F /* ABNLocationsAppTests.swift */; };
+		CD66604C2A2CC7FC0057F70F /* SceneDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66604B2A2CC7FC0057F70F /* SceneDelegateTests.swift */; };
+		CD6660652A2CCCA80057F70F /* LocationUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6660642A2CCCA80057F70F /* LocationUIComposer.swift */; };
+		CD6660672A2CCE770057F70F /* WeakRefVirtualProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6660662A2CCE770057F70F /* WeakRefVirtualProxy.swift */; };
+		CD66606A2A2CDEE80057F70F /* CombineHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6660692A2CDEE80057F70F /* CombineHelpers.swift */; };
+		CD66606E2A2CEA670057F70F /* ABNLocationiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD66606C2A2CEA670057F70F /* ABNLocationiOS.framework */; };
+		CD66606F2A2CEA670057F70F /* ABNLocationiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD66606C2A2CEA670057F70F /* ABNLocationiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CD6660702A2CEA670057F70F /* ABNLocations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD66606D2A2CEA670057F70F /* ABNLocations.framework */; };
+		CD6660712A2CEA670057F70F /* ABNLocations.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD66606D2A2CEA670057F70F /* ABNLocations.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +31,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CD6660722A2CEA670057F70F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CD66606F2A2CEA670057F70F /* ABNLocationiOS.framework in Embed Frameworks */,
+				CD6660712A2CEA670057F70F /* ABNLocations.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		CD6660312A2CC7FA0057F70F /* ABNLocationsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABNLocationsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6660342A2CC7FA0057F70F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -32,7 +54,12 @@
 		CD6660402A2CC7FB0057F70F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD6660422A2CC7FB0057F70F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD6660472A2CC7FC0057F70F /* ABNLocationsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ABNLocationsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD66604B2A2CC7FC0057F70F /* ABNLocationsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABNLocationsAppTests.swift; sourceTree = "<group>"; };
+		CD66604B2A2CC7FC0057F70F /* SceneDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegateTests.swift; sourceTree = "<group>"; };
+		CD6660642A2CCCA80057F70F /* LocationUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationUIComposer.swift; sourceTree = "<group>"; };
+		CD6660662A2CCE770057F70F /* WeakRefVirtualProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefVirtualProxy.swift; sourceTree = "<group>"; };
+		CD6660692A2CDEE80057F70F /* CombineHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHelpers.swift; sourceTree = "<group>"; };
+		CD66606C2A2CEA670057F70F /* ABNLocationiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ABNLocationiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD66606D2A2CEA670057F70F /* ABNLocations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ABNLocations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD66606E2A2CEA670057F70F /* ABNLocationiOS.framework in Frameworks */,
+				CD6660702A2CEA670057F70F /* ABNLocations.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +88,7 @@
 				CD6660332A2CC7FA0057F70F /* ABNLocationsApp */,
 				CD66604A2A2CC7FC0057F70F /* ABNLocationsAppTests */,
 				CD6660322A2CC7FA0057F70F /* Products */,
+				CD66606B2A2CEA670057F70F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +109,9 @@
 				CD66603D2A2CC7FB0057F70F /* Assets.xcassets */,
 				CD66603F2A2CC7FB0057F70F /* LaunchScreen.storyboard */,
 				CD6660422A2CC7FB0057F70F /* Info.plist */,
+				CD6660642A2CCCA80057F70F /* LocationUIComposer.swift */,
+				CD6660662A2CCE770057F70F /* WeakRefVirtualProxy.swift */,
+				CD6660692A2CDEE80057F70F /* CombineHelpers.swift */,
 			);
 			path = ABNLocationsApp;
 			sourceTree = "<group>";
@@ -86,9 +119,18 @@
 		CD66604A2A2CC7FC0057F70F /* ABNLocationsAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				CD66604B2A2CC7FC0057F70F /* ABNLocationsAppTests.swift */,
+				CD66604B2A2CC7FC0057F70F /* SceneDelegateTests.swift */,
 			);
 			path = ABNLocationsAppTests;
+			sourceTree = "<group>";
+		};
+		CD66606B2A2CEA670057F70F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD66606C2A2CEA670057F70F /* ABNLocationiOS.framework */,
+				CD66606D2A2CEA670057F70F /* ABNLocations.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,6 +143,7 @@
 				CD66602D2A2CC7FA0057F70F /* Sources */,
 				CD66602E2A2CC7FA0057F70F /* Frameworks */,
 				CD66602F2A2CC7FA0057F70F /* Resources */,
+				CD6660722A2CEA670057F70F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -191,7 +234,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD6660652A2CCCA80057F70F /* LocationUIComposer.swift in Sources */,
 				CD6660352A2CC7FA0057F70F /* AppDelegate.swift in Sources */,
+				CD6660672A2CCE770057F70F /* WeakRefVirtualProxy.swift in Sources */,
+				CD66606A2A2CDEE80057F70F /* CombineHelpers.swift in Sources */,
 				CD6660372A2CC7FA0057F70F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,7 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD66604C2A2CC7FC0057F70F /* ABNLocationsAppTests.swift in Sources */,
+				CD66604C2A2CC7FC0057F70F /* SceneDelegateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

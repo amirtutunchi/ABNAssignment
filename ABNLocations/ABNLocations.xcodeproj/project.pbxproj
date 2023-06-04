@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		CD36B9152A2C8A4300CBD99B /* snapshots in Resources */ = {isa = PBXBuildFile; fileRef = CD36B9142A2C8A4200CBD99B /* snapshots */; };
 		CD6660272A2C98E40057F70F /* UITableView+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6660262A2C98E40057F70F /* UITableView+Dequeueing.swift */; };
+		CD6660732A2CEB780057F70F /* ABNLocations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDAA0A02A2B5422001AE440 /* ABNLocations.framework */; };
+		CD6660742A2CEB780057F70F /* ABNLocations.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CDDAA0A02A2B5422001AE440 /* ABNLocations.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CD80CF852A2B949A00B63853 /* LocationsPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD80CF842A2B949A00B63853 /* LocationsPresentation.swift */; };
 		CD80CF872A2B94D200B63853 /* LocationLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD80CF862A2B94D200B63853 /* LocationLoadingViewModel.swift */; };
 		CD80CF892A2B94E900B63853 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD80CF882A2B94E900B63853 /* LocationViewModel.swift */; };
 		CD80CF972A2BC8DC00B63853 /* ABNLocationiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD80CF8F2A2BC8DC00B63853 /* ABNLocationiOS.framework */; };
-		CD80CF9D2A2BC8DC00B63853 /* ABNLocationiOS.h in Headers */ = {isa = PBXBuildFile; fileRef = CD80CF912A2BC8DC00B63853 /* ABNLocationiOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD80CFB32A2BE00F00B63853 /* UIViewContorller+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD80CFB22A2BE00F00B63853 /* UIViewContorller+Snapshot.swift */; };
 		CD80CFB52A2BE04100B63853 /* XCTestCase+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD80CFB42A2BE04100B63853 /* XCTestCase+Snapshot.swift */; };
 		CD80CFB92A2BE1D300B63853 /* LocationsListSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD80CFB82A2BE1D300B63853 /* LocationsListSnapshotTests.swift */; };
@@ -21,7 +22,6 @@
 		CDB6BD212A2BE72600B571FF /* LocationCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB6BD202A2BE72600B571FF /* LocationCellController.swift */; };
 		CDB6BD242A2BE77A00B571FF /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB6BD232A2BE77A00B571FF /* LocationCell.swift */; };
 		CDDAA0A92A2B5422001AE440 /* ABNLocations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDAA0A02A2B5422001AE440 /* ABNLocations.framework */; };
-		CDDAA0AF2A2B5422001AE440 /* ABNLocations.h in Headers */ = {isa = PBXBuildFile; fileRef = CDDAA0A32A2B5422001AE440 /* ABNLocations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDDAA0BA2A2B553D001AE440 /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0B92A2B553D001AE440 /* URLSessionHTTPClientTests.swift */; };
 		CDDAA0BD2A2B5642001AE440 /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0BC2A2B5642001AE440 /* URLProtocolStub.swift */; };
 		CDDAA0C02A2B577B001AE440 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0BF2A2B577B001AE440 /* XCTestCase+MemoryLeakTracking.swift */; };
@@ -39,6 +39,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CD6660752A2CEB780057F70F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDDAA0972A2B5422001AE440 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDDAA09F2A2B5422001AE440;
+			remoteInfo = ABNLocations;
+		};
 		CD80CF982A2BC8DC00B63853 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CDDAA0972A2B5422001AE440 /* Project object */;
@@ -55,14 +62,28 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CD6660772A2CEB780057F70F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CD6660742A2CEB780057F70F /* ABNLocations.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		CD36B9142A2C8A4200CBD99B /* snapshots */ = {isa = PBXFileReference; lastKnownFileType = folder; path = snapshots; sourceTree = "<group>"; };
 		CD6660262A2C98E40057F70F /* UITableView+Dequeueing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeueing.swift"; sourceTree = "<group>"; };
+		CD6660782A2CF23F0057F70F /* CI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; name = CI.xctestplan; path = ABNLocations/CI.xctestplan; sourceTree = SOURCE_ROOT; };
 		CD80CF842A2B949A00B63853 /* LocationsPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsPresentation.swift; sourceTree = "<group>"; };
 		CD80CF862A2B94D200B63853 /* LocationLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationLoadingViewModel.swift; sourceTree = "<group>"; };
 		CD80CF882A2B94E900B63853 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		CD80CF8F2A2BC8DC00B63853 /* ABNLocationiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ABNLocationiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD80CF912A2BC8DC00B63853 /* ABNLocationiOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABNLocationiOS.h; sourceTree = "<group>"; };
 		CD80CF962A2BC8DC00B63853 /* ABNLocationiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ABNLocationiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD80CFB22A2BE00F00B63853 /* UIViewContorller+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewContorller+Snapshot.swift"; sourceTree = "<group>"; };
 		CD80CFB42A2BE04100B63853 /* XCTestCase+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Snapshot.swift"; sourceTree = "<group>"; };
@@ -71,7 +92,6 @@
 		CDB6BD202A2BE72600B571FF /* LocationCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCellController.swift; sourceTree = "<group>"; };
 		CDB6BD232A2BE77A00B571FF /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		CDDAA0A02A2B5422001AE440 /* ABNLocations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ABNLocations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CDDAA0A32A2B5422001AE440 /* ABNLocations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABNLocations.h; sourceTree = "<group>"; };
 		CDDAA0A82A2B5422001AE440 /* ABNLocationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ABNLocationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDDAA0B92A2B553D001AE440 /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		CDDAA0BC2A2B5642001AE440 /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
@@ -94,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD6660732A2CEB780057F70F /* ABNLocations.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				CD80CFB62A2BE09B00B63853 /* Locations UI */,
-				CD80CF912A2BC8DC00B63853 /* ABNLocationiOS.h */,
 			);
 			path = ABNLocationiOS;
 			sourceTree = "<group>";
@@ -228,11 +248,11 @@
 		CDDAA0A22A2B5422001AE440 /* ABNLocations */ = {
 			isa = PBXGroup;
 			children = (
+				CD6660782A2CF23F0057F70F /* CI.xctestplan */,
 				CDDAA0D82A2B724F001AE440 /* Location Presentation */,
 				CDDAA0CC2A2B62D3001AE440 /* Location Feature */,
 				CDDAA0C82A2B6064001AE440 /* Locations API */,
 				CDDAA0C12A2B5807001AE440 /* Shared API Infra */,
-				CDDAA0A32A2B5422001AE440 /* ABNLocations.h */,
 			);
 			path = ABNLocations;
 			sourceTree = "<group>";
@@ -343,7 +363,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD80CF9D2A2BC8DC00B63853 /* ABNLocationiOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,7 +370,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDDAA0AF2A2B5422001AE440 /* ABNLocations.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,10 +384,12 @@
 				CD80CF8B2A2BC8DC00B63853 /* Sources */,
 				CD80CF8C2A2BC8DC00B63853 /* Frameworks */,
 				CD80CF8D2A2BC8DC00B63853 /* Resources */,
+				CD6660772A2CEB780057F70F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CD6660762A2CEB780057F70F /* PBXTargetDependency */,
 			);
 			name = ABNLocationiOS;
 			productName = ABNLocationiOS;
@@ -565,6 +585,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CD6660762A2CEB780057F70F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDDAA09F2A2B5422001AE440 /* ABNLocations */;
+			targetProxy = CD6660752A2CEB780057F70F /* PBXContainerItemProxy */;
+		};
 		CD80CF992A2BC8DC00B63853 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CD80CF8E2A2BC8DC00B63853 /* ABNLocationiOS */;
@@ -606,7 +631,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -643,7 +668,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
