@@ -29,6 +29,14 @@ final class LocationsListSnapshotTests: XCTestCase {
         assert(snapshot: sut.snapshot(for: .iPhone13(style: .light)), named: "LOCATION_LIST_light")
         assert(snapshot: sut.snapshot(for: .iPhone13(style: .dark)), named: "LOCATION_LIST_dark")
     }
+    
+    func test_locationsList_addNewLocation() {
+        let sut = makeSUT()
+        let alertController = sut.createPromptForNewLocation()
+        
+        assert(snapshot: alertController.snapshot(for: .iPhone13(style: .light)), named: "ADD_NEW_LOCATION_light")
+        assert(snapshot: alertController.snapshot(for: .iPhone13(style: .dark)), named: "ADD_NEW_LOCATION_dark")
+    }
 }
 
 // MARK: - Test Helpers
