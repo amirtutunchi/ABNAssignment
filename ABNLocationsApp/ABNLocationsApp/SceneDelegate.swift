@@ -1,32 +1,34 @@
 import UIKit
+import ABNLocations
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
-
+    private lazy var baseURL = URL(string: "https://raw.githubusercontent.com/")!
+    
+    private lazy var httpClient: HTTPClient = {
+        URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
+    }()
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let scene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(windowScene: scene)
+        configureWindow()
     }
-
-    func sceneDidDisconnect(_ scene: UIScene) {
+    
+    func configureWindow() {
+        let locationsListViewController = LocationUIComposer.locationsComposedWith(locationLoader: makeRemoteLocationLoader())
+        window?.rootViewController = locationsListViewController
+        window?.makeKeyAndVisible()
     }
-
-    func sceneDidBecomeActive(_ scene: UIScene) {
+    
+    private func makeRemoteLocationLoader() -> LocationLoader {
+        let url = LocationEndpoint.get.url(baseURL: baseURL)
         
-    }
-
-    func sceneWillResignActive(_ scene: UIScene) {
-        
-    }
-
-    func sceneWillEnterForeground(_ scene: UIScene) {
-        
-    }
-
-    func sceneDidEnterBackground(_ scene: UIScene) {
-        
+        return httpClient
+            .getPublisher(url: url)
+            .tryMap(LocationMapper.map)
+            .eraseToAnyPublisher()
     }
 }
-

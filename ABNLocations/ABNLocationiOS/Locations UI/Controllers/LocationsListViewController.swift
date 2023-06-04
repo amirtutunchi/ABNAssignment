@@ -2,7 +2,18 @@ import UIKit
 import ABNLocations
 
 public final class LocationsListViewController: UITableViewController {
-    var openCoordinate: ((_ latitude: Double, _ longitude: Double) -> Void)?
+    public var openCoordinate: ((_ latitude: Double, _ longitude: Double) -> Void)?
+    public var onRefresh: (() -> Void)?
+    
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        onRefresh?()
+    }
+    
+    @IBAction private func refresh() {
+        onRefresh?()
+    }
+    
     private var tableModel: [LocationCellController] = [] {
         didSet {
             tableView.reloadData()
