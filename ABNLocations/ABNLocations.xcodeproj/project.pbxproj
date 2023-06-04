@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD36B9152A2C8A4300CBD99B /* snapshots in Resources */ = {isa = PBXBuildFile; fileRef = CD36B9142A2C8A4200CBD99B /* snapshots */; };
+		CD6660272A2C98E40057F70F /* UITableView+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6660262A2C98E40057F70F /* UITableView+Dequeueing.swift */; };
 		CD80CF852A2B949A00B63853 /* LocationsPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD80CF842A2B949A00B63853 /* LocationsPresentation.swift */; };
 		CD80CF872A2B94D200B63853 /* LocationLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD80CF862A2B94D200B63853 /* LocationLoadingViewModel.swift */; };
 		CD80CF892A2B94E900B63853 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD80CF882A2B94E900B63853 /* LocationViewModel.swift */; };
@@ -14,6 +16,10 @@
 		CD80CF9D2A2BC8DC00B63853 /* ABNLocationiOS.h in Headers */ = {isa = PBXBuildFile; fileRef = CD80CF912A2BC8DC00B63853 /* ABNLocationiOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD80CFB32A2BE00F00B63853 /* UIViewContorller+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD80CFB22A2BE00F00B63853 /* UIViewContorller+Snapshot.swift */; };
 		CD80CFB52A2BE04100B63853 /* XCTestCase+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD80CFB42A2BE04100B63853 /* XCTestCase+Snapshot.swift */; };
+		CD80CFB92A2BE1D300B63853 /* LocationsListSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD80CFB82A2BE1D300B63853 /* LocationsListSnapshotTests.swift */; };
+		CDB6BD1F2A2BE70200B571FF /* LocationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB6BD1E2A2BE70200B571FF /* LocationsListViewController.swift */; };
+		CDB6BD212A2BE72600B571FF /* LocationCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB6BD202A2BE72600B571FF /* LocationCellController.swift */; };
+		CDB6BD242A2BE77A00B571FF /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB6BD232A2BE77A00B571FF /* LocationCell.swift */; };
 		CDDAA0A92A2B5422001AE440 /* ABNLocations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDAA0A02A2B5422001AE440 /* ABNLocations.framework */; };
 		CDDAA0AF2A2B5422001AE440 /* ABNLocations.h in Headers */ = {isa = PBXBuildFile; fileRef = CDDAA0A32A2B5422001AE440 /* ABNLocations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDDAA0BA2A2B553D001AE440 /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0B92A2B553D001AE440 /* URLSessionHTTPClientTests.swift */; };
@@ -29,6 +35,7 @@
 		CDDAA0D52A2B6C07001AE440 /* LocationEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0D42A2B6C07001AE440 /* LocationEndpointTests.swift */; };
 		CDDAA0D72A2B6DDA001AE440 /* LocationEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0D62A2B6DDA001AE440 /* LocationEndpoint.swift */; };
 		CDDAA0DB2A2B72EC001AE440 /* LocationPresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDAA0DA2A2B72EC001AE440 /* LocationPresentationTests.swift */; };
+		CDF603D92A2BE8C800DDDD42 /* LocationsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF603D82A2BE8C800DDDD42 /* LocationsList.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD36B9142A2C8A4200CBD99B /* snapshots */ = {isa = PBXFileReference; lastKnownFileType = folder; path = snapshots; sourceTree = "<group>"; };
+		CD6660262A2C98E40057F70F /* UITableView+Dequeueing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeueing.swift"; sourceTree = "<group>"; };
 		CD80CF842A2B949A00B63853 /* LocationsPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsPresentation.swift; sourceTree = "<group>"; };
 		CD80CF862A2B94D200B63853 /* LocationLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationLoadingViewModel.swift; sourceTree = "<group>"; };
 		CD80CF882A2B94E900B63853 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
@@ -57,6 +66,10 @@
 		CD80CF962A2BC8DC00B63853 /* ABNLocationiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ABNLocationiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD80CFB22A2BE00F00B63853 /* UIViewContorller+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewContorller+Snapshot.swift"; sourceTree = "<group>"; };
 		CD80CFB42A2BE04100B63853 /* XCTestCase+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Snapshot.swift"; sourceTree = "<group>"; };
+		CD80CFB82A2BE1D300B63853 /* LocationsListSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListSnapshotTests.swift; sourceTree = "<group>"; };
+		CDB6BD1E2A2BE70200B571FF /* LocationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListViewController.swift; sourceTree = "<group>"; };
+		CDB6BD202A2BE72600B571FF /* LocationCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCellController.swift; sourceTree = "<group>"; };
+		CDB6BD232A2BE77A00B571FF /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		CDDAA0A02A2B5422001AE440 /* ABNLocations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ABNLocations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDDAA0A32A2B5422001AE440 /* ABNLocations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABNLocations.h; sourceTree = "<group>"; };
 		CDDAA0A82A2B5422001AE440 /* ABNLocationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ABNLocationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +86,7 @@
 		CDDAA0D42A2B6C07001AE440 /* LocationEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEndpointTests.swift; sourceTree = "<group>"; };
 		CDDAA0D62A2B6DDA001AE440 /* LocationEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEndpoint.swift; sourceTree = "<group>"; };
 		CDDAA0DA2A2B72EC001AE440 /* LocationPresentationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPresentationTests.swift; sourceTree = "<group>"; };
+		CDF603D82A2BE8C800DDDD42 /* LocationsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationsList.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,10 +123,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD36B9172A2C8BD200CBD99B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD6660252A2C98DC0057F70F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CD6660262A2C98E40057F70F /* UITableView+Dequeueing.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		CD80CF902A2BC8DC00B63853 /* ABNLocationiOS */ = {
 			isa = PBXGroup;
 			children = (
-				CD80CFB62A2BE09B00B63853 /* LocationsList */,
+				CD80CFB62A2BE09B00B63853 /* Locations UI */,
 				CD80CF912A2BC8DC00B63853 /* ABNLocationiOS.h */,
 			);
 			path = ABNLocationiOS;
@@ -121,6 +150,7 @@
 		CD80CF9A2A2BC8DC00B63853 /* ABNLocationiOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				CD80CFB72A2BE14500B63853 /* Locations UI */,
 				CD80CFB12A2BDFCE00B63853 /* Helpers */,
 			);
 			path = ABNLocationiOSTests;
@@ -135,11 +165,41 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		CD80CFB62A2BE09B00B63853 /* LocationsList */ = {
+		CD80CFB62A2BE09B00B63853 /* Locations UI */ = {
 			isa = PBXGroup;
 			children = (
+				CDB6BD222A2BE75600B571FF /* Views */,
+				CDB6BD1D2A2BE6DD00B571FF /* Controllers */,
 			);
-			path = LocationsList;
+			path = "Locations UI";
+			sourceTree = "<group>";
+		};
+		CD80CFB72A2BE14500B63853 /* Locations UI */ = {
+			isa = PBXGroup;
+			children = (
+				CD36B9142A2C8A4200CBD99B /* snapshots */,
+				CD80CFB82A2BE1D300B63853 /* LocationsListSnapshotTests.swift */,
+			);
+			path = "Locations UI";
+			sourceTree = "<group>";
+		};
+		CDB6BD1D2A2BE6DD00B571FF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CDB6BD1E2A2BE70200B571FF /* LocationsListViewController.swift */,
+				CDB6BD202A2BE72600B571FF /* LocationCellController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CDB6BD222A2BE75600B571FF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD6660252A2C98DC0057F70F /* Helpers */,
+				CDB6BD232A2BE77A00B571FF /* LocationCell.swift */,
+				CDF603D82A2BE8C800DDDD42 /* LocationsList.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CDDAA0962A2B5422001AE440 = {
@@ -150,6 +210,7 @@
 				CD80CF902A2BC8DC00B63853 /* ABNLocationiOS */,
 				CD80CF9A2A2BC8DC00B63853 /* ABNLocationiOSTests */,
 				CDDAA0A12A2B5422001AE440 /* Products */,
+				CD36B9172A2C8BD200CBD99B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -381,6 +442,7 @@
 				TargetAttributes = {
 					CD80CF8E2A2BC8DC00B63853 = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 					CD80CF952A2BC8DC00B63853 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -420,6 +482,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDF603D92A2BE8C800DDDD42 /* LocationsList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +490,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD36B9152A2C8A4300CBD99B /* snapshots in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +515,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDB6BD242A2BE77A00B571FF /* LocationCell.swift in Sources */,
+				CDB6BD212A2BE72600B571FF /* LocationCellController.swift in Sources */,
+				CDB6BD1F2A2BE70200B571FF /* LocationsListViewController.swift in Sources */,
+				CD6660272A2C98E40057F70F /* UITableView+Dequeueing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +526,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD80CFB92A2BE1D300B63853 /* LocationsListSnapshotTests.swift in Sources */,
 				CD80CFB52A2BE04100B63853 /* XCTestCase+Snapshot.swift in Sources */,
 				CD80CFB32A2BE00F00B63853 /* UIViewContorller+Snapshot.swift in Sources */,
 			);
@@ -512,6 +581,7 @@
 		CD80CF9F2A2BC8DC00B63853 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -535,7 +605,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -544,6 +618,7 @@
 		CD80CFA02A2BC8DC00B63853 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -567,6 +642,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -577,6 +655,7 @@
 		CD80CFA22A2BC8DC00B63853 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -585,6 +664,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.ABNLocationiOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -594,6 +676,7 @@
 		CD80CFA32A2BC8DC00B63853 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -602,6 +685,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.ABNLocationiOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -754,6 +840,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.ABNLocations;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -786,6 +873,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.ABNLocations;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -801,6 +889,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.ABNLocationsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
@@ -816,6 +905,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.ABNLocationsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
