@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "74251DAA-0E0C-4787-AFC5-EAAE5F12A399",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:ABNLocationsApp.xcodeproj",
+        "identifier" : "CD6660462A2CC7FC0057F70F",
+        "name" : "ABNLocationsAppTests"
+      }
+    }
+  ],
+  "version" : 1
+}

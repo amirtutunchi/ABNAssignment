@@ -18,7 +18,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func configureWindow() {
-        let locationsListViewController = LocationUIComposer.locationsComposedWith(locationLoader: makeRemoteLocationLoader())
+        let locationsListViewController = LocationUIComposer.locationsComposedWith(
+            locationLoader: makeRemoteLocationLoader(),
+            openCoordinate: { latitude, longitude in
+                let urlString = "wikipedia://places/?latitude=\(latitude)&longitude=\(longitude)"
+                   
+                if let url = URL(string: urlString) {
+                    if UIApplication.shared.canOpenURL(url) {
+                        UIApplication.shared.open(url)
+                    }
+                }
+            }
+        )
         window?.rootViewController = locationsListViewController
         window?.makeKeyAndVisible()
     }

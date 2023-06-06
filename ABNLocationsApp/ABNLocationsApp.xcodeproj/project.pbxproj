@@ -47,6 +47,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CD0B261B2A2F6F1900B9739F /* ABNLocationsApp.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; path = ABNLocationsApp.xctestplan; sourceTree = SOURCE_ROOT; };
 		CD6660312A2CC7FA0057F70F /* ABNLocationsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABNLocationsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6660342A2CC7FA0057F70F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD6660362A2CC7FA0057F70F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				CD66604B2A2CC7FC0057F70F /* SceneDelegateTests.swift */,
+				CD0B261B2A2F6F1900B9739F /* ABNLocationsApp.xctestplan */,
 			);
 			path = ABNLocationsAppTests;
 			sourceTree = "<group>";

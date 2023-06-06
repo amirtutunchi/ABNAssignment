@@ -10,7 +10,7 @@ final class WeakRefVirtualProxy<T: AnyObject> {
 }
 
 extension WeakRefVirtualProxy: LocationView where T: LocationView {
-    func display(_ viewModel: [ABNLocations.LocationViewModel]) {
+    func display(_ viewModel: [LocationViewModel]) {
         object?.display(viewModel)
     }
 }

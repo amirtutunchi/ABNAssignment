@@ -8,9 +8,13 @@ public typealias LocationLoader = AnyPublisher<[Location], Error>
 public final class LocationUIComposer {
     private init() { }
     
-    public static func locationsComposedWith(locationLoader: LocationLoader) -> LocationsListViewController {
+    public static func locationsComposedWith(
+        locationLoader: LocationLoader,
+        openCoordinate: ((_ latitude: Double, _ longitude: Double) -> Void)?
+    ) -> LocationsListViewController {
         let presentationAdaptor = LocationLoaderPresentationAdaptor(locationLoader: locationLoader)
         let controller = makeLocationsListViewController()
+        controller.openCoordinate = openCoordinate
         controller.onRefresh = presentationAdaptor.loadLocations
         let presentation = LocationsPresentation(
             loadingView: WeakRefVirtualProxy(controller),
