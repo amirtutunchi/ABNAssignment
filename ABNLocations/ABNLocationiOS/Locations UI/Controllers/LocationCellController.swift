@@ -2,12 +2,16 @@ import UIKit
 import ABNLocations
 
 public final class LocationCellController {
-    public var openCoordinate: ((_ latitude: Double, _ longitude: Double) -> Void)?
-    public init(viewModel: LocationViewModel) {
-        self.viewModel = viewModel
-    }
-    
+    private let openCoordinate: (_ latitude: Double, _ longitude: Double) -> Void
     private let viewModel: LocationViewModel
+    
+    public init(
+        viewModel: LocationViewModel,
+        openCoordinate: @escaping (_ latitude: Double, _ longitude: Double) -> Void
+    ) {
+        self.viewModel = viewModel
+        self.openCoordinate = openCoordinate
+    }
     
     public func view(in tableView: UITableView) -> UITableViewCell {
         let cell: LocationCell = tableView.dequeueReusableCell()
@@ -18,7 +22,7 @@ public final class LocationCellController {
     }
     
     public func didSelectedCell() {
-        openCoordinate?(viewModel.latitude, viewModel.longitude)
+        openCoordinate(viewModel.latitude, viewModel.longitude)
     }
 }
 

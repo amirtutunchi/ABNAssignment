@@ -10,7 +10,7 @@ public final class LocationUIComposer {
     
     public static func locationsComposedWith(
         locationLoader: @escaping () -> LocationLoader,
-        openCoordinate: ((_ latitude: Double, _ longitude: Double) -> Void)?
+        openCoordinate: @escaping (_ latitude: Double, _ longitude: Double) -> Void
     ) -> LocationsListViewController {
         let presentationAdaptor = LocationLoaderPresentationAdaptor(locationLoader: locationLoader)
         let controller = makeLocationsListViewController()

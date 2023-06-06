@@ -48,27 +48,31 @@ extension LocationsListSnapshotTests {
     }
     
     private func fullList() -> [LocationCellController] {
-        [
+        let selection: (Double, Double) -> Void = { _, _ in }
+        return [
             LocationCellController(
                 viewModel: LocationViewModel(
                     name: nil,
                     latitude: 12.123445,
                     longitude: 21.5643544
-                )
+                ),
+                openCoordinate: selection
             ),
             LocationCellController(
                 viewModel: LocationViewModel(
                     name: "Malibu",
                     latitude: 12.123445,
                     longitude: 21.5643544
-                )
+                ),
+                openCoordinate: selection
             ),
             LocationCellController(
                 viewModel: LocationViewModel(
                     name: "Esfahan",
                     latitude: 12.123445,
                     longitude: 21.5643544
-                )
+                ),
+                openCoordinate: selection
             )
         ]
     }

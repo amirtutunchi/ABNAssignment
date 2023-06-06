@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "75942DA2-802A-4F20-BE96-8DCE8C790706",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:ABNLocations.xcodeproj",
+        "identifier" : "CD80CF952A2BC8DC00B63853",
+        "name" : "ABNLocationiOSTests"
+      }
+    }
+  ],
+  "version" : 1
+}

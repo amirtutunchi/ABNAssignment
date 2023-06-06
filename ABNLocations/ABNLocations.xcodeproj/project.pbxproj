@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD0B26222A2F8EE600B9739F /* ABNLocationiOS.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = CD0B26212A2F8EE600B9739F /* ABNLocationiOS.xctestplan */; };
 		CD36B9152A2C8A4300CBD99B /* snapshots in Resources */ = {isa = PBXBuildFile; fileRef = CD36B9142A2C8A4200CBD99B /* snapshots */; };
 		CD6660272A2C98E40057F70F /* UITableView+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6660262A2C98E40057F70F /* UITableView+Dequeueing.swift */; };
 		CD6660732A2CEB780057F70F /* ABNLocations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDAA0A02A2B5422001AE440 /* ABNLocations.framework */; };
@@ -77,9 +78,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CD0B26212A2F8EE600B9739F /* ABNLocationiOS.xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ABNLocationiOS.xctestplan; sourceTree = "<group>"; };
 		CD36B9142A2C8A4200CBD99B /* snapshots */ = {isa = PBXFileReference; lastKnownFileType = folder; path = snapshots; sourceTree = "<group>"; };
 		CD6660262A2C98E40057F70F /* UITableView+Dequeueing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeueing.swift"; sourceTree = "<group>"; };
-		CD6660782A2CF23F0057F70F /* CI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; name = CI.xctestplan; path = ABNLocations/CI.xctestplan; sourceTree = SOURCE_ROOT; };
+		CD6660782A2CF23F0057F70F /* CI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = CI.xctestplan; path = ABNLocations/CI.xctestplan; sourceTree = SOURCE_ROOT; };
 		CD80CF842A2B949A00B63853 /* LocationsPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsPresentation.swift; sourceTree = "<group>"; };
 		CD80CF862A2B94D200B63853 /* LocationLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationLoadingViewModel.swift; sourceTree = "<group>"; };
 		CD80CF882A2B94E900B63853 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		CD80CF902A2BC8DC00B63853 /* ABNLocationiOS */ = {
 			isa = PBXGroup;
 			children = (
+				CD0B26212A2F8EE600B9739F /* ABNLocationiOS.xctestplan */,
 				CD80CFB62A2BE09B00B63853 /* Locations UI */,
 			);
 			path = ABNLocationiOS;
@@ -502,6 +505,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD0B26222A2F8EE600B9739F /* ABNLocationiOS.xctestplan in Resources */,
 				CDF603D92A2BE8C800DDDD42 /* LocationsList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -34,7 +34,6 @@ public final class LocationsListViewController: UITableViewController {
     
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableModel[indexPath.row]
-        cell.openCoordinate = openCoordinate
         return cell.view(in: tableView)
     }
     
@@ -72,7 +71,10 @@ extension LocationsListViewController: LocationView, LocationLoadingView {
     public func display(_ viewModel: [ABNLocations.LocationViewModel]) {
         display(
             viewModel.map{
-                LocationCellController(viewModel: $0)
+                LocationCellController(
+                    viewModel: $0,
+                    openCoordinate: openCoordinate ?? { _, _ in }
+                )
             }
         )
     }
