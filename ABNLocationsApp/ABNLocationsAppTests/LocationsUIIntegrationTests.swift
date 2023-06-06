@@ -47,7 +47,17 @@ final class LocationsUIIntegrationTests: XCTestCase {
         assertThat(sut, isRendering: [location1, location2])
     }
     
-    
+    func test_loadLocationCompletion_dispatchesFromBackgroundToMainThread() {
+        let (sut, loader) = makeSUT()
+        sut.loadViewIfNeeded()
+        
+        let exp = expectation(description: "Wait for background queue")
+        DispatchQueue.global().async {
+            loader.completeLocationLoading(at: 0)
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 1.0)
+    }
 }
 
 // MARK: - Test Helpers
