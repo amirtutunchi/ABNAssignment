@@ -34,12 +34,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.makeKeyAndVisible()
     }
     
-    private func makeRemoteLocationLoader() -> LocationLoader {
-        let url = LocationEndpoint.get.url(baseURL: baseURL)
-        
-        return httpClient
-            .getPublisher(url: url)
-            .tryMap(LocationMapper.map)
-            .eraseToAnyPublisher()
+    private func makeRemoteLocationLoader() -> () -> LocationLoader {
+        return { [baseURL, httpClient] in
+            let url = LocationEndpoint.get.url(baseURL: baseURL)
+            return httpClient
+                .getPublisher(url: url)
+                .tryMap(LocationMapper.map)
+                .eraseToAnyPublisher()
+        }
     }
 }

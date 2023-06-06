@@ -9,7 +9,7 @@ public final class LocationUIComposer {
     private init() { }
     
     public static func locationsComposedWith(
-        locationLoader: LocationLoader,
+        locationLoader: @escaping () -> LocationLoader,
         openCoordinate: ((_ latitude: Double, _ longitude: Double) -> Void)?
     ) -> LocationsListViewController {
         let presentationAdaptor = LocationLoaderPresentationAdaptor(locationLoader: locationLoader)
@@ -37,12 +37,12 @@ public final class LocationUIComposer {
 }
 
 final class LocationLoaderPresentationAdaptor {
-    let locationLoader: LocationLoader
+    let locationLoader: () -> LocationLoader
     var locationPresenter: LocationsPresentation?
     private var cancellable: Cancellable?
     private var isLoading = false
 
-    init(locationLoader: LocationLoader) {
+    init(locationLoader: @escaping () -> LocationLoader) {
         self.locationLoader = locationLoader
     }
     
@@ -52,7 +52,7 @@ final class LocationLoaderPresentationAdaptor {
         locationPresenter?.didStartLoading()
         isLoading = true
 
-        cancellable = locationLoader
+        cancellable = locationLoader()
             .dispatchOnMainQueue()
             .sink(
                 receiveCompletion: { [weak self] _ in

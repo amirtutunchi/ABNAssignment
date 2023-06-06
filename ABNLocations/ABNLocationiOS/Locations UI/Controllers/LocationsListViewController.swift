@@ -7,7 +7,7 @@ public final class LocationsListViewController: UITableViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        onRefresh?()
+        refresh()
     }
     
     @IBAction private func refresh() {
