@@ -1,3 +1,5 @@
+[![CI](https://github.com/amirtutunchi/ABNAssignment/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/amirtutunchi/ABNAssignment/actions/workflows/CI.yml)
+
 # ABN Amro Assignment
 
 ## Instructions:
