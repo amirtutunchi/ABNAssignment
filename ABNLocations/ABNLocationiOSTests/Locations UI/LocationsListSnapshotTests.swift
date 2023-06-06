@@ -21,7 +21,7 @@ final class LocationsListSnapshotTests: XCTestCase {
         assert(snapshot: sut.snapshot(for: .iPhone13(style: .dark)), named: "LOADING_LIST_dark")
     }
     
-    func test_locationsList_loacationListWithData() {
+    func test_locationsList_locationListWithData() {
         let sut = makeSUT()
         
         sut.display(fullList())
@@ -48,31 +48,30 @@ extension LocationsListSnapshotTests {
     }
     
     private func fullList() -> [LocationCellController] {
-        let selection: (Double, Double) -> Void = { _, _ in }
-        return [
+        [
             LocationCellController(
                 viewModel: LocationViewModel(
                     name: nil,
-                    latitude: 12.123445,
-                    longitude: 21.5643544
+                    latitude: 12.12344,
+                    longitude: 21.56435
                 ),
-                openCoordinate: selection
+                openCoordinate:  { _, _ in  }
             ),
             LocationCellController(
                 viewModel: LocationViewModel(
                     name: "Malibu",
-                    latitude: 12.123445,
-                    longitude: 21.5643544
+                    latitude: 12.12344,
+                    longitude: 21.5643
                 ),
-                openCoordinate: selection
+                openCoordinate:  { _, _ in  }
             ),
             LocationCellController(
                 viewModel: LocationViewModel(
                     name: "Esfahan",
-                    latitude: 12.123445,
-                    longitude: 21.5643544
+                    latitude: 12.123,
+                    longitude: 21.56435
                 ),
-                openCoordinate: selection
+                openCoordinate:  { _, _ in  }
             )
         ]
     }
