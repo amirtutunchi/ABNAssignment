@@ -2,6 +2,9 @@
 
 # ABN Amro Assignment
 
+To ensure a smooth experience and avoid any potential issues, please use Xcode 14.3 for this assignment.
+
+
 ## Instructions:
 
 To get started with the ABNLocationApp, please follow these steps:
@@ -91,3 +94,9 @@ response: on 200 response (✅)
 For continuous integration, I have created a schema that encompasses all the test suites from each framework. This schema ensures that all tests are executed and validates the correctness of the codebase. To automate this process, I utilize GitHub Actions, which runs the schema for each pull request (PR). This ensures that any changes introduced in the PR do not break existing functionality.
 
 To keep track of the test status, you can refer to the badge at the beginning of this document. The badge provides a visual indication of the current test status, allowing you to quickly assess the health of the codebase.
+
+## Final Thoughts
+
+During the course of this project, I may have implemented certain architectural designs that could be perceived as slightly over-engineered. However, my intention behind these decisions was to demonstrate my proficiency in designing various solutions and addressing complex challenges.
+
+I would like to extend my heartfelt thanks for reviewing this project. I highly value your feedback and would greatly appreciate hearing your thoughts.
