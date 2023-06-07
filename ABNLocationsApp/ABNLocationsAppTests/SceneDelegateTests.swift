@@ -24,6 +24,22 @@ final class SceneDelegateTests: XCTestCase {
         
         XCTAssertTrue(rootViewController != nil, "Expected a LocationsListViewController as top view controller, got \(String(describing: rootViewController)) instead")
     }
+    
+    func test_configureWindow_openPopupWhenWikipediaAppIsNotInstalled() {
+        let sut = SceneDelegate()
+        sut.window = UIWindow()
+        let lat = 12.123
+        let long = 12.123
+        sut.configureWindow()
+        let url = URL(string: "wikipedia://places/?latitude=\(lat)&longitude=\(long)")!
+        if !UIApplication.shared.canOpenURL(url) {
+            let root = sut.window?.rootViewController
+            let locationViewController = root as? LocationsListViewController
+            locationViewController?.openCoordinate?(lat, long)
+            let alertController = root?.presentedViewController as? UIAlertController
+            XCTAssertTrue(alertController != nil, "Expected an UIAlertController since the Wikipedia app is not installed")
+        }
+    }
 }
 
 // MARK: - Helper: - UIWindowSpy
