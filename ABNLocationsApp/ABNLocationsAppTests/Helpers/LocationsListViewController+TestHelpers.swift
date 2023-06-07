@@ -2,6 +2,8 @@ import ABNLocationiOS
 import UIKit
 
 extension LocationsListViewController {
+    private var locationSection: Int { 0 }
+    
     func simulateUserInitiatedReload() {
         refreshControl?.simulatePullToRefresh()
     }
@@ -12,8 +14,6 @@ extension LocationsListViewController {
         delegate?.tableView?(tableView, didSelectRowAt: index)
     }
     
-    private var locationSection: Int { 0 }
-    
     func numberOfRenderedLocationViews() -> Int {
         return tableView.numberOfRows(inSection: locationSection)
     }
@@ -22,9 +22,9 @@ extension LocationsListViewController {
         guard numberOfRenderedLocationViews() > row else {
             return nil
         }
-        let ds = tableView.dataSource
+        let dataSource = tableView.dataSource
         let index = IndexPath(row: row, section: locationSection)
-        return ds?.tableView(tableView, cellForRowAt: index)
+        return dataSource?.tableView(tableView, cellForRowAt: index)
     }
 }
 

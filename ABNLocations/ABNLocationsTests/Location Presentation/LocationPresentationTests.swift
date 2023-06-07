@@ -1,5 +1,5 @@
-import XCTest
 import ABNLocations
+import XCTest
 
 final class LocationPresentationTests: XCTestCase {
     func test_init_doesNotSendMessagesToView() {

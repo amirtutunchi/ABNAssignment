@@ -1,5 +1,5 @@
-import UIKit
 import ABNLocations
+import UIKit
 
 public final class LocationsListViewController: UITableViewController {
     public var openCoordinate: ((_ latitude: Double, _ longitude: Double) -> Void)?
@@ -33,8 +33,7 @@ public final class LocationsListViewController: UITableViewController {
     }
     
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableModel[indexPath.row]
-        return cell.view(in: tableView)
+       tableModel[indexPath.row].view(in: tableView)
     }
     
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

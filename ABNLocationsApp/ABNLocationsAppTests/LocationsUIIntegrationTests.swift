@@ -8,6 +8,7 @@ final class LocationsUIIntegrationTests: XCTestCase {
         XCTAssertEqual(loader.loadLocationsCallCount, 0, "Expected no loading requests before view is loaded")
         
         sut.loadViewIfNeeded()
+        
         XCTAssertEqual(loader.loadLocationsCallCount, 1, "Expected a loading request once view is loaded")
         sut.simulateUserInitiatedReload()
         XCTAssertEqual(loader.loadLocationsCallCount, 1, "Expected no request until previous completes")

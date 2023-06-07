@@ -56,5 +56,5 @@ class URLProtocolStub: URLProtocol {
         stub.requestObserver?(request)
     }
     
-    override func stopLoading() {}
+    override func stopLoading() { }
 }

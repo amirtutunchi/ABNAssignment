@@ -7,7 +7,9 @@ final class SceneDelegateTests: XCTestCase {
         let window = UIWindowSpy()
         let sut = SceneDelegate()
         sut.window = window
+        
         sut.configureWindow()
+        
         XCTAssertEqual(window.makeKeyAndVisibleCallCount, 1, "Expected to make window key and visible")
     }
     
@@ -23,9 +25,11 @@ final class SceneDelegateTests: XCTestCase {
         XCTAssertTrue(rootViewController != nil, "Expected a LocationsListViewController as top view controller, got \(String(describing: rootViewController)) instead")
     }
 }
+
 // MARK: - Helper: - UIWindowSpy
 private class UIWindowSpy: UIWindow {
     var makeKeyAndVisibleCallCount = 0
+    
     override func makeKeyAndVisible() {
         makeKeyAndVisibleCallCount = 1
     }

@@ -21,7 +21,6 @@ extension LocationsUIIntegrationTests {
     }
     
     class LoaderSpy {
-        
         private var locationRequests = [PassthroughSubject<[Location], Error>]()
         
         var loadLocationsCallCount: Int {
@@ -33,7 +32,7 @@ extension LocationsUIIntegrationTests {
             locationRequests.append(publisher)
             return publisher.eraseToAnyPublisher()
         }
-     
+        
         func completeLocationLoading(
             with locations: [Location] = [],
             at index: Int = 0
@@ -42,29 +41,70 @@ extension LocationsUIIntegrationTests {
         }
     }
     
-    func assertThat(_ sut: LocationsListViewController, isRendering locations: [Location], file: StaticString = #file, line: UInt = #line) {
-            sut.view.enforceLayoutCycle()
-            
-            guard sut.numberOfRenderedLocationViews() == locations.count else {
-                return XCTFail("Expected \(locations.count) locations, got \(sut.numberOfRenderedLocationViews()) instead.", file: file, line: line)
-            }
-            
-            locations.enumerated().forEach { index, image in
-                assertThat(sut, hasViewConfiguredFor: image, at: index, file: file, line: line)
-            }
+    func assertThat(
+        _ sut: LocationsListViewController,
+        isRendering locations: [Location],
+        file: StaticString = #file,
+        line: UInt = #line
+    ) {
+        sut.view.enforceLayoutCycle()
+        
+        guard sut.numberOfRenderedLocationViews() == locations.count else {
+            return XCTFail(
+                "Expected \(locations.count) locations, got \(sut.numberOfRenderedLocationViews()) instead.",
+                file: file,
+                line: line
+            )
         }
         
-        func assertThat(_ sut: LocationsListViewController, hasViewConfiguredFor location: Location, at index: Int, file: StaticString = #file, line: UInt = #line) {
-            let view = sut.locationView(at: index)
-            
-            guard let cell = view as? LocationCell else {
-                return XCTFail("Expected \(LocationCell.self) instance, got \(String(describing: view)) instead", file: file, line: line)
-            }
-            
-            
-            XCTAssertEqual(cell.nameText, location.name, "Expected name text to be \(String(describing: location.name)) for location view at index (\(index))", file: file, line: line)
-            XCTAssertEqual(cell.latitudeText, String(location.latitude), "Expected latitude text to be \(String(describing: location.latitude)) for location view at index (\(index))", file: file, line: line)
-            
-            XCTAssertEqual(cell.longitudeText, String(location.longitude), "Expected longitude text to be \(String(describing: location.longitude)) for location view at index (\(index)", file: file, line: line)
+        locations.enumerated().forEach { index, image in
+            assertThat(
+                sut,
+                hasViewConfiguredFor: image,
+                at: index,
+                file: file,
+                line: line
+            )
         }
+    }
+    
+    func assertThat(
+        _ sut: LocationsListViewController,
+        hasViewConfiguredFor location: Location,
+        at index: Int,
+        file: StaticString = #file,
+        line: UInt = #line
+    ) {
+        let view = sut.locationView(at: index)
+        
+        guard let cell = view as? LocationCell else {
+            return XCTFail(
+                "Expected \(LocationCell.self) instance, got \(String(describing: view)) instead",
+                file: file,
+                line: line
+            )
+        }
+        
+        XCTAssertEqual(
+            cell.nameText,
+            location.name,
+            "Expected name text to be \(String(describing: location.name)) for location view at index (\(index))",
+            file: file,
+            line: line
+        )
+        XCTAssertEqual(
+            cell.latitudeText,
+            String(location.latitude),
+            "Expected latitude text to be \(String(describing: location.latitude)) for location view at index (\(index))",
+            file: file,
+            line: line
+        )
+        XCTAssertEqual(
+            cell.longitudeText,
+            String(location.longitude),
+            "Expected longitude text to be \(String(describing: location.longitude)) for location view at index (\(index)",
+            file: file,
+            line: line
+        )
+    }
 }

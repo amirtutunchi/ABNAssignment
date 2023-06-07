@@ -18,12 +18,13 @@ public final class LocationUIComposer {
         controller.onRefresh = presentationAdaptor.loadLocations
         let presentation = LocationsPresentation(
             loadingView: WeakRefVirtualProxy(controller),
-            locationView: WeakRefVirtualProxy(controller)) {
-                locations in
+            locationView: WeakRefVirtualProxy(controller),
+            mapper: { locations in
                 locations.map {
                     LocationViewModel(name: $0.name, latitude: $0.latitude, longitude: $0.longitude)
                 }
             }
+        )
         presentationAdaptor.locationPresenter = presentation
         return controller
     }
