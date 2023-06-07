@@ -11,7 +11,7 @@ To get started with the ABNLocationApp, please follow these steps:
 
 1. Clone and run the Wikipedia app from this [repository](https://github.com/amirtutunchi/wikipedia-iOS) on your simulator. If you would like to see my modifications to the Wikipedia repository, you can visit this [link](https://github.com/amirtutunchi/wikipedia-iOS/commit/f6645d4ed7784f9f4268fe91d5ac4241146cb1ce).
 
-2. Once you have the Wikipedia app set up, open the ABN.wcworkspace file in Xcode. Then, select the ABNLocationAPP scheme and run it on your simulator.
+2. Once you have the Wikipedia app set up, open the ABN.wcworkspace file in Xcode. Then, select the ABNLocationApp scheme and run it on your simulator.
 
 3. In the ABNLocationApp, you can navigate from the location list to Wikipedia by tapping on the desired location.
 
